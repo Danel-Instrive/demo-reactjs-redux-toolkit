@@ -1,12 +1,11 @@
 import { ThemeProvider, useMediaQuery } from "@mui/material";
 import { useSelector } from "react-redux";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Outlet } from "react-router-dom";
 import MiniDrawer from "./sidebar/Drawer";
 import LabelBottomNavigation from "./sidebar/BottomNavigation";
 import Header from "./header/Header";
 import lightModeTheme from "./theme/lightModeTheme";
 import darkModeTheme from "./theme/darkModeTheme";
-import Routes from "./router/Routes";
 
 const drawerWidth = 240;
 
@@ -27,7 +26,7 @@ function App() {
           {!isSmallScreen && <MiniDrawer />}
         </div>
         <div style={{ marginLeft: open ? drawerWidth : 67 }}>
-          <Routes />
+          <Outlet />
         </div>
         {isSmallScreen && (
           <div style={{ position: "fixed", bottom: 0, left: 0, right: 0 }}>
