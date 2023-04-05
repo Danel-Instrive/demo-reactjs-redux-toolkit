@@ -16,8 +16,8 @@ import { Icon } from "@iconify/react";
 import { useDispatch, useSelector } from "react-redux";
 import { makeStyles } from "@mui/styles";
 import { useNavigate } from "react-router-dom";
-import data from "../data/demoData";
 import { setOpen } from "../state/reducers/drawerReducer";
+import data from "../data/DemoData";
 
 const drawerWidth = 240;
 

@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import { Icon } from "@iconify/react";
-import { Link, useNavigate } from "react-router-dom";
-import data from "../data/demoData";
+import { Link } from "react-router-dom";
+import data from "../data/DemoData";
 
 export default function LabelBottomNavigation() {
   const [value, setValue] = useState("recents");
-  const navigate = useNavigate();
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
